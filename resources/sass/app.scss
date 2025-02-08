@@ -21,3 +21,7 @@ $beige-lighter: #eff0eb;
 // (check https://fonts.google.com/ for fonts)
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
+.navbar-item.is-active {
+    background-color: #003366;
+}

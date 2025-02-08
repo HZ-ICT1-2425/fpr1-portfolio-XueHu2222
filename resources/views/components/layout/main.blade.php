@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+@php
+    $navItems = [
+        [
+            'title' => 'Home',
+            'route' => 'home',
+        ],
+        [
+            'title' => 'Profile',
+            'route' => 'profile',
+        ],
+        [
+            'title' => 'Dashboard',
+            'route' => 'dashboard',
+        ],
+        [
+            'title' => 'FAQ',
+            'route' => 'faq',
+        ],
+        [
+            'title' => 'Post',
+            'route' => 'posts.index',
+        ],
+    ];
+@endphp
+
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -25,39 +50,13 @@
         </div>
         <div class="navbar-menu" id="navMenu">
             <div class="navbar-start">
-                <a href="{{ route('home') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'home' ? "is-active" : "" }}">
-                    Home
-                </a>
-            </div>
-            <div class="navbar-start">
-                <a href="{{ route('profile') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'profile' ? "is-active" : "" }}">
-                    Profile
-                </a>
-            </div>
-            <div class="navbar-start">
-                <a href="{{ route('dashboard') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'dashboard' ? "is-active" : "" }}">
-                    Dashboard
-                </a>
-            </div>
-            <div class="navbar-start">
-                <a href="{{ route('faq') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'faq' ? "is-active" : "" }}">
-                    FAQ
-                </a>
-            </div>
-            <div class="navbar-start">
-                <a href="{{ route('posts.index') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'posts.index' ? "is-active" : "" }}">
-                    Post
-                </a>
+                @foreach ($navItems as $navItem)
+                    <x-navbar-item :item="$navItem" />
+                @endforeach
             </div>
         </div>
     </div>
 </nav>
-
 
 {{$slot}}
 
