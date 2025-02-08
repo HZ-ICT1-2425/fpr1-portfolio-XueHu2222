@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class StaticContentController extends Controller
 {
     public function home()
@@ -11,7 +9,8 @@ class StaticContentController extends Controller
         return view('welcome');
     }
 
-    public function profile() {
+    public function profile()
+    {
         return view('profile');
     }
 

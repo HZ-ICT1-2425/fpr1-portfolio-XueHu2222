@@ -49,8 +49,8 @@
                 </a>
             </div>
             <div class="navbar-start">
-                <a href="{{ route('home') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'home' ? "is-active" : "" }}">
+                <a href="{{ route('posts.index') }}"
+                   class="navbar-item {{ Request::route()->getName() === 'posts.index' ? "is-active" : "" }}">
                     Post
                 </a>
             </div>
@@ -88,6 +88,5 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>
