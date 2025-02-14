@@ -6,19 +6,39 @@ use Illuminate\Http\Request;
 
 class StaticContentController extends Controller
 {
-    public function home() {
+    /**
+     * display home
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function home()
+    {
         return view('welcome');
     }
 
-    public function dashboard() {
+    /**
+     * display dashboard
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function dashboard()
+    {
         return view('dashboard');
     }
 
-    public function profile() {
+    /**
+     * display profile
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function profile()
+    {
         return view('profile');
     }
 
-    public function faq() {
+    /**
+     * display faq
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function faq()
+    {
         return view('faq');
     }
 }
