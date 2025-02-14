@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index() {
+    /**
+     *  display the list of posts
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function index()
+    {
         return view('posts.index');
     }
 }

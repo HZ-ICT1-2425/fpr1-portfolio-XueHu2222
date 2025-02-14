@@ -9,8 +9,3 @@ Route::get('/profile', [StaticContentController::class, 'profile'])->name('profi
 Route::get('/faq', [StaticContentController::class, 'faq'])->name('faq');
 
 Route::get('/posts', [StaticContentController::class, 'index'])->name('posts.index');
-
-
-
-
-
