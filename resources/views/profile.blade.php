@@ -1,3 +1,5 @@
 <x-layout.main>
-    <div>profile</div>
+    <section class="content">
+        <h1>profile</h1>
+    </section>
 </x-layout.main>

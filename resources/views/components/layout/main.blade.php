@@ -1,3 +1,12 @@
+@php
+$navItems = [
+['title' => 'Home', 'route' => 'home'],
+['title' => 'Profile', 'route' => 'profile'],
+['title' => 'Dashboard', 'route' => 'dashboard'],
+['title' => 'FAQ', 'route' => 'faq'],
+];
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -25,22 +34,9 @@
         </div>
         <div class="navbar-menu" id="navMenu">
             <div class="navbar-start">
-                <a href="{{ route('home') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'home' ? "is-active" : "" }}">
-                    Home
-                </a>
-                <a href="{{ route('profile') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'profile' ? "is-active" : "" }}">
-                    Profile
-                </a>
-                <a href="{{ route('dashboard') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'dashboard' ? "is-active" : "" }}">
-                    Dashboard
-                </a>
-                <a href="{{ route('faq') }}"
-                   class="navbar-item {{ Request::route()->getName() === 'faq' ? "is-active" : "" }}">
-                    FAQ
-                </a>
+                @foreach ($navItems as $navItem)
+                    <x-navbar-item :item="$navItem"></x-navbar-item>
+                @endforeach
             </div>
         </div>
     </div>
