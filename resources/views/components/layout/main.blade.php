@@ -4,6 +4,7 @@ $navItems = [
 ['title' => 'Profile', 'route' => 'profile'],
 ['title' => 'Dashboard', 'route' => 'dashboard'],
 ['title' => 'FAQ', 'route' => 'faq'],
+['title' => 'Post', 'route' => 'posts.index'],
 ];
 @endphp
 
