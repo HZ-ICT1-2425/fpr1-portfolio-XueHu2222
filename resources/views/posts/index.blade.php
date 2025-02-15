@@ -4,7 +4,7 @@
             <section class="content mt-5">
                 <h1>Posts</h1>
                 <div>Welcome to posts!</div>
-                <a class="button is-primary">Create A New Post</a>
+                <a href="{{route('posts.create')}}" class="button is-primary">Create A New Post</a>
                 @foreach($posts as $post)
                     <div class="mt-3">
                         <h3>
