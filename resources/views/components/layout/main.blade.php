@@ -3,7 +3,7 @@ $navItems = [
 ['title' => 'Home', 'route' => 'home'],
 ['title' => 'Profile', 'route' => 'profile'],
 ['title' => 'Dashboard', 'route' => 'dashboard'],
-['title' => 'FAQ', 'route' => 'faq'],
+['title' => 'FAQ', 'route' => 'faqs.index'],
 ['title' => 'Post', 'route' => 'posts.index'],
 ];
 @endphp
