@@ -7,5 +7,10 @@
             </div>
             <p>{!! $post -> body !!}</p>
         </section>
+        <form action="{{ route('posts.destroy', $post) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="button is-danger" onclick="return confirm('Are you sure?')">Delete</button>
+        </form>
     </div>
 </x-layout.main>

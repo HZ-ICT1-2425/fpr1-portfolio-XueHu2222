@@ -75,6 +75,17 @@ class FaqController extends Controller
     }
 
     /**
+     * delete a faq
+     * @param Faq $faq fetch one faq
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Faq $faq)
+    {
+        $faq->delete();
+        return redirect()->route('faqs.index');
+    }
+
+    /**
      * display specific faq
      * @param Faq $faq one faq data
      * @return \Illuminate\Contracts\View\View

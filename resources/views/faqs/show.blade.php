@@ -10,5 +10,10 @@
                 <a href="{{ Str::startsWith($faq->link, ['http://', 'https://']) ? $faq->link : 'http://' . $faq->link }}" target="_blank">{!! $faq->link !!}</a>
             @endif
         </section>
+        <form action="{{route('faqs.destroy', $faq)}}" method ='POST'>
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="button is-danger" onclick="return confirm('Are you sure?')">Delete</button>
+        </form>
     </div>
 </x-layout.main>

@@ -95,6 +95,17 @@ class PostController extends Controller
     }
 
     /**
+     * delete a post
+     * @param Post $post fetch one post
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Post $post)
+    {
+        $post->delete();
+        return redirect()->route('posts.index');
+    }
+
+    /**
      * display the collection of posts
      * @param Post $post one post data
      * @return \Illuminate\Contracts\View\View
