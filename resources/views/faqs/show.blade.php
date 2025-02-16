@@ -2,6 +2,9 @@
     <div class="container">
         <section class="content mt-5">
             <h1>{{$faq -> question}}</h1>
+            <div class="column has-text-right">
+                <a href="{{ route('faqs.edit', $faq) }}" class="button is-primary">Edit</a>
+            </div>
             <h3>{!! $faq -> answer !!}</h3>
             @if(!empty($faq -> link))
                 <a href="{{ Str::startsWith($faq->link, ['http://', 'https://']) ? $faq->link : 'http://' . $faq->link }}" target="_blank">{!! $faq->link !!}</a>

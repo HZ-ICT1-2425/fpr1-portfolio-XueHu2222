@@ -28,7 +28,7 @@ class PostController extends Controller
     }
 
     /**
-     * store users data
+     * store blog data
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -58,8 +58,45 @@ class PostController extends Controller
     }
 
     /**
+     * edit post page
+     * @param Post $post fetch post
+     * @return \Illuminate\Contracts\View\View|
+     */
+    public function edit(Post $post)
+    {
+        return view('posts.edit', compact('post'));
+    }
+    /**
+     * update data when save
+     * @param Request $request get all posts
+     * @param Post $post fetch post
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Request $request, Post $post)
+    {
+        $validated = $request->validate([
+            'title' => 'required|string|min:10',
+            'slug' => 'nullable|string|min:10',
+            'summary' => 'nullable|string|min:10',
+            'body' => 'required|string|min:10',
+        ]);
+
+        if (empty($validated['slug'])) {
+            $validated['slug'] = Str::slug($validated['title']);
+        }
+
+        if (empty($request->input('summary'))) {
+            $validated['summary'] = substr($request->input('body'), 0, 50);
+        }
+
+        $post->update($validated);
+
+        return redirect()->route('posts.show', $post);
+    }
+
+    /**
      * display the collection of posts
-     * @param Post $post
+     * @param Post $post one post data
      * @return \Illuminate\Contracts\View\View
      */
     public function show(Post $post)

@@ -6,7 +6,7 @@
             <h1>Create a New Post</h1>
             <br>
             <h2 class="subtitle is-6">
-                Please fill out all the form fields and click 'Submit'
+                Please fill out the required form fields and click 'Submit'
             </h2>
 
             {{-- Here are all the form fields --}}
