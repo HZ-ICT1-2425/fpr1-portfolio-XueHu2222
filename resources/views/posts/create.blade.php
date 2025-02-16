@@ -28,18 +28,18 @@
             </div>
 
             <div class="field">
-                <label for="excerpt" class="label">Excerpt</label>
+                <label for="summary" class="label">Summary</label>
                 <div class="control has-icons-right">
-                    <input type="text" name="excerpt" placeholder="Enter a summary of the post content..."
-                           class="input @error('excerpt') is-danger @enderror"
-                           value="{{ old('excerpt') }}" autocomplete="excerpt">
-                    @error('excerpt')
+                    <input type="text" name="summary" placeholder="Enter a summary of the post content..."
+                           class="input @error('summary') is-danger @enderror"
+                           value="{{ old('summary') }}" autocomplete="summary">
+                    @error('summary')
                     <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>
                     </span>
                     @enderror
                 </div>
-                @error('excerpt')
+                @error('summary')
                 <p class="help is-danger">{{ $message }}</p>
                 @enderror
             </div>

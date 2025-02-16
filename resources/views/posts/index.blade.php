@@ -7,11 +7,14 @@
                 <a href="{{route('posts.create')}}" class="button is-primary">Create A New Post</a>
                 @foreach($posts as $post)
                     <div class="mt-3">
-                        <h3>
-                            <a href="{{route('posts.show', $post)}}">{{$post -> title}}</a>
-                        </h3>
                         <div>
-                            {!! $post -> excerpt !!}
+                            <a href="{{route('posts.show', $post)}}" class="is-size-4">{{$post -> title}}</a>
+                            <div>
+                                {!! $post -> summary !!}
+                            </div>
+                            <div>
+                                <a href="{{route('posts.show', $post)}}">Read More</a>
+                            </div>
                         </div>
                         <br>
                     </div>

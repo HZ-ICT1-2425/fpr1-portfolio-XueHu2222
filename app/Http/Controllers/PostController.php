@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -34,10 +35,18 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required',
+            'title' => 'required|string|min:10',
+            'slug' => 'nullable|string|min:10',
+            'body' => 'required|string|min:10',
         ]);
+
+        if (empty($validated['slug'])) {
+            $validated['slug'] = Str::slug($validated['title']);
+        }
+
+        if (empty($request->input('summary'))) {
+            $validated['summary'] = substr($request->input('body'), 0, 30);
+        }
 
         // Create a new Post model object, mass-assign its attributes with
         // the validated data and store it to the database
