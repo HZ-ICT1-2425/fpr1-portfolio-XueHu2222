@@ -30,9 +30,8 @@
             <div class="field">
                 <label for="summary" class="label">Summary</label>
                 <div class="control has-icons-right">
-                    <input type="text" name="summary" placeholder="Enter a summary of the post content..."
-                           class="input @error('summary') is-danger @enderror"
-                           value="{{ old('summary') }}" autocomplete="summary">
+                    <textarea name="summary" placeholder="Enter a summary of the post content..."
+                              class="textarea @error('summary') is-danger @enderror" autocomplete="summary">{{ old('summary') }}</textarea>
                     @error('summary')
                     <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -47,9 +46,8 @@
             <div class="field">
                 <label for="body" class="label">Body</label>
                 <div class="control has-icons-right">
-                    <input type="text" name="body" placeholder="Enter the post's content here..."
-                           class="input @error('body') is-danger @enderror"
-                           value="{{ old('body') }}" autocomplete="body">
+                    <textarea name="body" placeholder="Enter the post's content here..."
+                              class="textarea @error('body') is-danger @enderror" autocomplete="body">{{ old('body') }}</textarea>
                     @error('body')
                     <span class="icon has-text-danger is-small is-right">
                         <i class="fas fa-exclamation-triangle"></i>

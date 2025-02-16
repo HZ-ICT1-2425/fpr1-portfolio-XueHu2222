@@ -37,6 +37,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|min:10',
             'slug' => 'nullable|string|min:10',
+            'summary' => 'nullable|string|min:10',
             'body' => 'required|string|min:10',
         ]);
 
@@ -45,7 +46,7 @@ class PostController extends Controller
         }
 
         if (empty($request->input('summary'))) {
-            $validated['summary'] = substr($request->input('body'), 0, 30);
+            $validated['summary'] = substr($request->input('body'), 0, 50);
         }
 
         // Create a new Post model object, mass-assign its attributes with
