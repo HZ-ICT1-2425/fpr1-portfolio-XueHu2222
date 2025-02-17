@@ -25,9 +25,11 @@ class FaqSeeder extends Seeder
                 'link' => 'https://hzuniversity.topdesk.net/tas/public/ssp/'
             ],
             [
-                'question' => 'How can I buy something (like when I sign up for the IT introduction event) on the HZ web shop?',
+                'question' => 'How can I buy something (like when I sign up for the IT introduction event)
+                 on the HZ web shop?',
                 'answer' => 'Go to HZ Shop and sign in.',
-                'link' => 'https://webshop.hz.nl/webshopapp/defaulten.aspx?menu=082076044027019251066025111065201099237062130097'
+                'link' => 'https://webshop.hz.nl/webshopapp/defaulten
+                .aspx?menu=082076044027019251066025111065201099237062130097'
             ]
         ]);
     }
