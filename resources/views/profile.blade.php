@@ -1,7 +1,8 @@
 <x-layout.main>
+    <div class="row has-text-centered">
+        <img src="images/game.jpg" alt="game" style="width: 100%; height: auto;">
+    </div>
     <div class="container">
-        <section class="content mt-5">
-            <h1>profile</h1>
-        </section>
+
     </div>
 </x-layout.main>

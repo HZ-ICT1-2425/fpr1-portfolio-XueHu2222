@@ -15,14 +15,19 @@ class FaqSeeder extends Seeder
     {
         Faq::insert([
             [
-                'question' => 'This is question 1?',
-                'answer' => 'This is answer 1',
-                'link' => 'https://google.com'
+                'question' => 'How can you print a document from your laptop at HZ?',
+                'answer' => 'Click link and sign in student account.',
+                'link' => 'https://hz.mynetpay.nl/Login'
             ],
             [
-                'question' => 'This is question 2?',
-                'answer' => 'This is answer 2',
-                'link' => null
+                'question' => 'How can you scan a document and send it to your laptop at HZ?',
+                'answer' => 'Check this link',
+                'link' => 'https://hzuniversity.topdesk.net/tas/public/ssp/'
+            ],
+            [
+                'question' => 'How can I buy something (like when I sign up for the IT introduction event) on the HZ web shop?',
+                'answer' => 'Go to HZ Shop and sign in.',
+                'link' => 'https://webshop.hz.nl/webshopapp/defaulten.aspx?menu=082076044027019251066025111065201099237062130097'
             ]
         ]);
     }

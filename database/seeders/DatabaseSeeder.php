@@ -25,5 +25,4 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
         ]);
     }
-
 }

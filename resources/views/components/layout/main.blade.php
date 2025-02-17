@@ -1,6 +1,6 @@
 @php
 $navItems = [
-['title' => 'Home', 'route' => 'home'],
+['title' => 'Home', 'route' => 'home', 'icon' => 'images/homeIcon.png'],
 ['title' => 'Profile', 'route' => 'profile'],
 ['title' => 'Dashboard', 'route' => 'dashboard'],
 ['title' => 'FAQ', 'route' => 'faqs.index'],
@@ -24,9 +24,6 @@ $navItems = [
 <nav class="navbar is-primary  has-text-white">
     <div class="container">
         <div class="navbar-brand">
-            <a href="/" class="navbar-item">
-                <strong><i class="fas fa-graduation-cap"></i> HZ</strong>
-            </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -48,18 +45,40 @@ $navItems = [
 {{-- Footer --}}
 <footer class="footer">
     <div class="container">
-        <div class="columns is-multiline">
+        <div class="columns is-multiline content">
+
+            <div class="column has-text-left">
+                    <img src="images/hzIcon.png" alt="HZicon" style="width: 100%; max-width: 300px; height: auto;">
+            </div>
 
             <div class="column has-text-centered">
                 <div>
-                    <a href="/" class="link">Home</a>
+                    <h3>
+                        Studying at HZ
+                    </h3>
+                    <p>
+                    <a href="https://portal.hz.nl/en/" target="_blank" class="is-underlined has-text-black">
+                        HZ Portal
+                    </a>
+                    </p>
+                    <p>
+                    <a href="https://learn.hz.nl/my/" target="_blank" class="is-underlined has-text-black">
+                        Learn environment
+                    </a>
+                    </p>
                 </div>
             </div>
 
             <div class="column has-text-centered">
                 <div>
-                    <a href="https://opensource.org/licenses/MIT" class="link">
-                        <i class="fa fa-balance-scale" aria-hidden="true"></i> License: MIT
+                    <h3>
+                        Contact Me
+                    </h3>
+                    <a href="https://www.instagram.com/xueeee22/" target="_blank" class="link">
+                       <img src="images/insIcon.png" alt="insIcon">
+                    </a>
+                    <a href="https://github.com/XueHu2222" target="_blank" class="link">
+                        <img src="images/githubIcon.png" alt="gitIcon">
                     </a>
                 </div>
             </div>
@@ -67,9 +86,7 @@ $navItems = [
         </div>
 
         <div class="content is-small has-text-centered">
-            <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a> | adapted by <a
-                        href="https://github.com/dwaard">BugSlayer</a></p>
-            <p>PROJECT FOOTER HERE</p>
+            <p class="">Built by Xue Hu</p>
         </div>
     </div>
 </footer>
