@@ -68,7 +68,7 @@ class PostController extends Controller
     }
     /**
      * update data when save
-     * @param Request $request get all posts
+     * @param Request $request get valid data
      * @param Post $post fetch post
      * @return \Illuminate\Http\RedirectResponse
      */

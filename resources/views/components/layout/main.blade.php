@@ -48,7 +48,7 @@ $navItems = [
         <div class="columns is-multiline content">
 
             <div class="column has-text-left">
-                    <img src="images/hzIcon.png" alt="HZicon" style="width: 100%; max-width: 300px; height: auto;">
+                    <img src="{{asset('images/hzIcon.png')}}" alt="HZicon" style="width: 100%; max-width: 300px; height: auto;">
             </div>
 
             <div class="column has-text-centered">
@@ -75,10 +75,10 @@ $navItems = [
                         Contact Me
                     </h3>
                     <a href="https://www.instagram.com/xueeee22/" target="_blank" class="link">
-                       <img src="images/insIcon.png" alt="insIcon">
+                       <img src="{{ asset('images/insIcon.png') }}" alt="insIcon">
                     </a>
                     <a href="https://github.com/XueHu2222" target="_blank" class="link">
-                        <img src="images/githubIcon.png" alt="gitIcon">
+                        <img src="{{ asset('images/githubIcon.png') }}" alt="gitIcon">
                     </a>
                 </div>
             </div>

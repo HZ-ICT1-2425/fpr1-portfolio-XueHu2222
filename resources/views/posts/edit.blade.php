@@ -63,6 +63,7 @@
                 <div class="field is-grouped">
                     <div class="control">
                         <button type="submit" class="button is-primary">Save</button>
+                        <a href="{{ url()->previous() }}" class="button is-link">Cancel</a>
                     </div>
                 </div>
             </form>

@@ -27,7 +27,7 @@ class FaqController extends Controller
     }
 
     /**
-     * store faq data
+     * store faq data and attribute data based on model
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -59,7 +59,7 @@ class FaqController extends Controller
 
     /**
      * update data when save
-     * @param Request $request get all faqs
+     * @param Request $request get valid data
      * @param Faq $faq fetch one faq
      * @return \Illuminate\Http\RedirectResponse
      */
