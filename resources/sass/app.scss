@@ -1,5 +1,5 @@
 // Define project theme colors
-$hz-background : #0078cc;
+$hz-background : #e7edf0;
 $purple: #8a4d76;
 $pink: #fa7c91;
 $brown: #757763;
@@ -21,3 +21,7 @@ $beige-lighter: #eff0eb;
 // (check https://fonts.google.com/ for fonts)
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.navbar-item.is-active {
+    background-color: #4489b8;
+    color: white;
+}
